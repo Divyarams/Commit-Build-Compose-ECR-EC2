@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+hooks:
+  ApplicationStop:
+    - location: deployment_scripts/kill_container.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+    - location: deployment_scripts/load_image.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deployment_scripts/start_container.sh
+      timeout: 300
+      runas: root
+
+  

@@ -7,3 +7,6 @@ CodeCommit for source code repository. CodeBuild for building docker images and 
 # EC2 Deployment
 For deployment into EC2 instances, require an installation of CodeDeploy Agent. The Agent fetches the appspec.yml and executes the lifecycle hooks one by one.
 The hooks that the user can define are ApplicationStop, BeforeInstall, AfterInstall, ApplicationStart and ValidationService. Describe actions in each hooks to create a running docker image in EC2.
+
+The agent logs for EC2 instances are available in 
+``/opt/codedeploy-agent/deployment-root/deployment-logs/codedeploy-agent-deployments.log``

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -d -p 8080:80 243987456759.dkr.ecr.us-east-1.amazonaws.com/ecr_docker_cbdemo:latest
+docker run -d -p 8080:80 $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$IMAGE_REPO:$IMAGE_TAG
